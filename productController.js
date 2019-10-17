@@ -16,7 +16,7 @@ module.exports = {
         const {id} = req.params;
 
         dbInstance.read_product(id)
-            .then(product => res.status(200).json(product))
+            .then((product) => res.status(200).json(product))
             .catch(err => {
                 res.status(500).send({ errorMessage: "Oops! Something went wrong. Our engineers have been informed!" });
                 console.log(err)
